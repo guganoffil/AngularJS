@@ -1,0 +1,20 @@
+<h1>Menu</h1>
+<div *ngIf="Books; else nobooks" [ngStyle]="{'color':'green'}">Books Available</div>
+
+<ng-template #nobooks>
+     <div *ngFor="let obj of Books1; index as i;odd as o;even as e; first as f;last as l">
+    <div [ngSwitch]="obj.Status">
+       <div *ngSwitchCase="'Available'" [ngStyle]="{'color':'green'}">
+  
+  </div>  
+    <div [ngClass]="{'avl':obj.Status=='Available','navl':obj.Status=='Not-Available','prt':obj.Status=='Printing'}">
+
+        <div> {{i}} {{obj.Book}} </div>
+    </div>
+    </div>
+
+    </div>
+</ng-template>
+{{amt.Amount}}
+<br>
+<button type="button" class="btn btn-warning" (click)="Add()">Add</button>

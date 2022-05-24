@@ -1,0 +1,11 @@
+<button type="button" class="btn btn-warning" (click)="Add()">Add</button>
+<br>
+{{amt.Amount}}
+<div>
+    <tr *ngFor="let subject of subjectChild">
+        <td>{{subject.id}}</td>
+        <td>{{subject.Name}}</td>
+    </tr>
+</div>
+<button class="btn btn-danger" (click)="generate()">generate!</button>
+
